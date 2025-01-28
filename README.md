@@ -5,6 +5,7 @@
 ### Two Pointers
 
 ### Sliding Window
+* Maximum Number of Vowels in a Substring of Given Length
 
 ### Prefix Sum
 
