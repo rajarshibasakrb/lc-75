@@ -1,0 +1,41 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def deleteMiddle(self, head):
+        """
+        :type head: Optional[ListNode]
+        :rtype: Optional[ListNode]
+        """
+
+        i = head
+        length = 1
+        # Calculate length of LinkedList
+        while i.next is not None:
+            i = i.next
+            length += 1
+
+        # If only one node in LinkedList
+        if length == 1:
+            head = None
+            return head
+
+        # Find the floored mid-point val;ue
+        middle = int(length/2)
+
+        # Initialize two pointers
+        p1 = head
+        p2 = head.next
+        i = head
+        # Iterate to reach the middle of the LinkedList
+        for i in range(middle-1):
+            p1 = p2
+            p2 = p2.next
+        # Make the node on the left point to the node on the right
+        p1.next = p2.next
+        # Delete the centre node
+        p2.ext = None
+
+        return head
