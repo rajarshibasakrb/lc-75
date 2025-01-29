@@ -19,6 +19,7 @@
 
 ### Linked List
 * Delete the Middle Node of a Linked List
+* Odd Even Linked List
 
 ### Binary Tree - DFS
 
