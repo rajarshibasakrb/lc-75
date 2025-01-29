@@ -1,0 +1,45 @@
+class Solution(object):
+    def closeStrings(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: bool
+        """
+        if len(word1) != len(word2):
+            return False
+
+        # Get frequency of characters
+        def get_letter_freq(word):
+            d = {}
+            for char in word:
+                if char not in d:
+                    d[char] = 1
+                else:
+                    d[char] += 1
+            return d
+        
+        # Get letter frequency of each word
+        word1_map = get_letter_freq(word1)
+        word2_map = get_letter_freq(word2)
+
+
+        # Simulating operation 1 by checking if both words contain the same letters frequency wise
+        if word1_map == word2_map:
+            return True
+
+        # Get a sorted list of all the values (i.e. frequencies of words)
+        word1_map_values = sorted(list(word1_map.values()))
+        word2_map_values = sorted(list(word2_map.values()))
+
+        # Get a set of all the keys
+        word1_map_keys = set(list(word1_map.keys()))
+        word2_map_keys = set(list(word2_map.keys()))
+        
+        # Simulating operation 2
+        # If both the words contain the same letters
+        if word1_map_keys == word2_map_keys:
+            # If just the frequency values are the same in each word
+            if word1_map_values == word2_map_values:
+                return True
+
+        return False
