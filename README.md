@@ -18,6 +18,7 @@
 ### Queue
 
 ### Linked List
+* Delete the Middle Node of a Linked List
 
 ### Binary Tree - DFS
 
