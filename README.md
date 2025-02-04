@@ -38,6 +38,7 @@
 ### Backtracking
 
 ### DP - 1D
+* N-th Tribonacci Number
 
 ### DP - Multidimensional
 
