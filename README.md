@@ -42,6 +42,7 @@
 
 ### DP - Multidimensional
 * Edit Distance
+* Longest Common Subsequence
 
 ### Bit Manipulation
 
