@@ -34,6 +34,7 @@
 ### Heap / Priority Queue
 
 ### Binary Search
+* Guess Number Higher or Lower
 
 ### Backtracking
 
