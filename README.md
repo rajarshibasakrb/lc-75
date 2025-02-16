@@ -35,6 +35,7 @@
 
 ### Binary Search
 * Guess Number Higher or Lower
+* Successful Pairs of Spells and Potions
 
 ### Backtracking
 
