@@ -1,0 +1,44 @@
+class Solution(object):
+    def successfulPairs(self, spells, potions, success):
+        """
+        :type spells: List[int]
+        :type potions: List[int]
+        :type success: int
+        :rtype: List[int]
+        """
+
+        """
+        # Iterate through all the spells
+        for i in spells:
+            temp = [i*j for j in potions]
+            print(temp)
+            ct = len([k for k in temp if k >= success])
+            result.append(ct)
+
+        #print(result)
+        """
+
+        potions = sorted(potions)
+        result = []
+        # Iterate through all the spells
+        for i in spells:
+            l,r = 0, len(potions)-1
+            idx = len(potions) # To find the left most index that satisfies the condition
+
+            # Start the Binary Search
+            # Condition: If the left index is less than or equal to the right index
+            while l <= r:
+                # Find the middle index
+                m = (l + r) // 2
+                # If the element at the required index is more than success
+                if i*potions[m] >= success:
+                    # Update the right index to point to left of m
+                    r = m - 1
+                    idx = m
+                else:
+                    # Update the left index to point right of m
+                    l = m + 1
+
+            result.append(len(potions) - idx)
+
+        return result
