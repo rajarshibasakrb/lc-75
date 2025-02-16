@@ -36,6 +36,7 @@
 ### Binary Search
 * Guess Number Higher or Lower
 * Successful Pairs of Spells and Potions
+* Find Peak Element
 
 ### Backtracking
 
