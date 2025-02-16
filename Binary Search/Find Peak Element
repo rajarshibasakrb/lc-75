@@ -1,0 +1,27 @@
+class Solution(object):
+    def findPeakElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        # Initialize pointers
+        l, r = 0, len(nums) - 1
+
+        # Start modified Binary Search
+        while l <= r:
+            # Find middle point
+            m = (l + r) // 2
+            #m = l + (r - l) // 2  
+            # If element at middle point is less than element to left, go left
+            # Since left element is greater      
+            if m > 0 and nums[m-1] > nums[m]:
+                # Update middle point
+                r = m - 1
+            # If element at middle point is less than element to right, go right
+            # Since right element is greater
+            elif m < len(nums) - 1 and nums[m] < nums[m+1]:
+                # Update middle point
+                l = m + 1
+            else: 
+                return m
