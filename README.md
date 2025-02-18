@@ -37,6 +37,7 @@
 * Guess Number Higher or Lower
 * Successful Pairs of Spells and Potions
 * Find Peak Element
+* Koko Eating Bananas
 
 ### Backtracking
 
